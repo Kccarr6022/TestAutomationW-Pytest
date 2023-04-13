@@ -88,6 +88,13 @@ class TicTacToeGame:
     def reset(self):
         self.board = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
         self.player = 'X'
+    
+    def is_valid_move(self, row, col):
+        if row < 0 or row > 2 or col < 0 or col > 2:
+            return False
+        if self.board[row][col] != ' ':
+            return False
+        return True
 
 class TicTacToeAI:
     def minimax(self, board, player):

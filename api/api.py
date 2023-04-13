@@ -15,7 +15,7 @@ class Move(BaseModel):
 @app.get("/game")
 def get_game():
     return {
-        "board": game.board.board,
+        "board": game.board,
         "game_over": game.is_game_over(),
         "winner": game.get_winner(),
     }

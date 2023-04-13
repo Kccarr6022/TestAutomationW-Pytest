@@ -109,7 +109,6 @@ class TestTicTacToeGame:
         assert not board.is_valid_move(-1, 0)
         assert not board.is_valid_move(0, -1)
         assert not board.is_valid_move(-1, -1)
-        assert not board.is_valid_move(0, 0)
         board.move(0, 0)
         assert not board.is_valid_move(0, 0)
 

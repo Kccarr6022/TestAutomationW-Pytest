@@ -76,7 +76,7 @@ const App = () => {
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-1/3 h-1/3">
                     <div className="h-1/2 w-1/2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                         <h1 id="winner" className="text-center text-4xl font-bold text-green-400">
-                            {game.winner === " " ? "Draw" : game.winner + " Wins!"}
+                            {game.winner === null ? "Draw" : game.winner + " Wins!"}
                         </h1>
                         <button
                             id="reset"
