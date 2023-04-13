@@ -13,7 +13,7 @@ class Move(BaseModel):
 
 
 @app.get("/game")
-def get_game():
+async def get_game():
     return {
         "board": game.board,
         "game_over": game.is_game_over(),
@@ -21,7 +21,7 @@ def get_game():
     }
 
 @app.post("/game/move")
-def move(move: Move):
+async def move(move: Move):
     print(move.row, move.col)
     game.move(move.row, move.col)
     return {
@@ -31,7 +31,7 @@ def move(move: Move):
     }
 
 @app.post("/game/reset")
-def reset():
+async def reset():
     game.reset()
     return {
         "board": game.board,

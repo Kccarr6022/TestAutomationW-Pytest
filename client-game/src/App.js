@@ -15,6 +15,8 @@ const App = () => {
     useEffect(() => {
         getGame()
 
+        setInterval(getGame, 500)
+
         return () => {
             // cleanup
             reset()
